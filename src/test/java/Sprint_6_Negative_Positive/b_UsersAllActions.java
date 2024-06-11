@@ -1,4 +1,4 @@
-package Sprint_6_Negative;
+package Sprint_6_Negative_Positive;
 
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;

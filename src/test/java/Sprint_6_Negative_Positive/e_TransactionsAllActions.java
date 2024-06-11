@@ -1,4 +1,4 @@
-package Sprint_6_Negative;
+package Sprint_6_Negative_Positive;
 
 import java.io.IOException;
 import org.openqa.selenium.By;
