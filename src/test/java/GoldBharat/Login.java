@@ -25,29 +25,28 @@ public class Login extends GoldBharat_BaseClass {
 	WebDriverUtility wUtility = new WebDriverUtility();
 	JavaUtility jUtility = new JavaUtility();
 	ExcelFileUtility eUtility = new ExcelFileUtility();
-	public PropertyFileUtility pUtility=new PropertyFileUtility();
-	
-		@Test(priority = 1, groups = "GoldBharatLogin")
-	public void login () throws InterruptedException, EncryptedDocumentException, IOException
-	{
-						
-	//	WebDriver driver = new ChromeDriver();
-	//	driver.get("https://goldbharat.com/");
+	public PropertyFileUtility pUtility = new PropertyFileUtility();
+
+	@Test(priority = 1, groups = "GoldBharatLogin")
+	public void login() throws InterruptedException, EncryptedDocumentException, IOException {
+
+		// WebDriver driver = new ChromeDriver();
+		// driver.get("https://goldbharat.com/");
 		GoldBharat_LoginPage loginPage = new GoldBharat_LoginPage(driver);
 		Thread.sleep(1000);
 		loginPage.clickOnLoginBtn();
-					Thread.sleep(1000);
-					String PhoneNumber = eUtility.readDataFromExcel("GoldBharat", 1, 1);
-			loginPage.clickOnPhnNum();
-			loginPage.getPhnNum().sendKeys(PhoneNumber);
-			Thread.sleep(1000);
-		
-			loginPage.clickOnSubmitBtn();
-				
+		Thread.sleep(1000);
+		String PhoneNumber = eUtility.readDataFromExcel("GoldBharat", 1, 1);
+		loginPage.clickOnPhnNum();
+		loginPage.getPhnNum().sendKeys(PhoneNumber);
+		Thread.sleep(1000);
+
+		loginPage.clickOnSubmitBtn();
+
 	}
-	/*	@Test(priority = 1, groups = "GoldBharatLogin")
-		public void loginTest()
-		{
-			
-		} */
+	/*
+	 * @Test(priority = 1, groups = "GoldBharatLogin") public void loginTest() {
+	 * 
+	 * }
+	 */
 }
