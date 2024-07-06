@@ -17,7 +17,23 @@ public class GoldBharat_RegistrationPage {
     @FindBy(xpath="//input[@formcontrolname='establishedDate']")private WebElement date;
     
     @FindBy(xpath="//input[@formcontrolname='pincode']")private WebElement PinCode;
+   @FindBy(xpath="/html/body/app-root/app-register/section/div/div/div/form/div[9]/div[1]/p[2]/input")private WebElement Circle;
+   @FindBy(xpath="//textarea[@formcontrolname='businessAddress']")private WebElement businessAddress;
+   @FindBy(xpath="//button[contains(text(), 'Register')]")private WebElement RegisterBtn2;
+   @FindBy(xpath="//input[@formcontrolname='phone']")private WebElement Phonenum;
+   @FindBy(xpath="//button[@type='submit']")private WebElement SubmitBtn;
+   
+  
+   
     @FindBy(xpath="//button[@type='submit']")private WebElement Register;
+    
+    @FindBy(xpath="//ng-otp-input/div/input[1]")private WebElement otp1;
+    @FindBy(xpath="//ng-otp-input/div/input[2]")private WebElement otp2;
+    @FindBy(xpath="//ng-otp-input/div/input[3]")private WebElement otp3;
+    @FindBy(xpath="//ng-otp-input/div/input[4]")private WebElement otp4;
+    @FindBy(xpath="//ng-otp-input/div/input[5]")private WebElement otp5;
+    @FindBy(xpath="//ng-otp-input/div/input[6]")private WebElement otp6;
+    
        
      
 	//Create a constructor to initialize these elements
@@ -53,10 +69,33 @@ public class GoldBharat_RegistrationPage {
 	public WebElement getPinCode() {
 		return PinCode;
 	}
+	
+	public WebElement getbusinessAddress() {
+		return businessAddress;
+	}
 	public WebElement getRegister() {
 		return Register;
 	}
-
+	public WebElement getotp1() {
+		return otp1;
+	}
+	
+	public WebElement getotp2() {
+		return otp2;
+	}
+	public WebElement getotp3() {
+		return otp3;
+	}
+	public WebElement getotp4() {
+		return otp4;
+	}
+	public WebElement getotp5() {
+		return otp5;
+	}
+	public WebElement getotp6() {
+		return otp6;
+	}
+	
 
 	//Business Libraries
 	
@@ -91,9 +130,18 @@ public class GoldBharat_RegistrationPage {
 	{
 		PinCode.click();
 	}
-	public void clickOnRegister()
+	public void clickOnCircle()
 	{
-		Register.click();
+		Circle.click();
+	}
+	
+	public void clickOnbusinessAddress()
+	{
+		businessAddress.click();
+	}
+	public void clickOnRegisterBtn2()
+	{
+		RegisterBtn2.click();
 	}
 
 
@@ -101,4 +149,37 @@ public class GoldBharat_RegistrationPage {
 		// TODO Auto-generated method stub
 		
 	}
+	public void clickOnSubmitBtn()
+	{
+		SubmitBtn.click();
+	}
+	
+	public void clickOnotp1()
+	{
+		otp1.click();
+	}
+	
+	
+	public void clickOnotp2()
+	{
+		otp2.click();
+	}
+	public void clickOnotp3()
+	{
+		otp3.click();
+	}
+	public void clickOnotp4()
+	{
+		otp4.click();
+	}
+	public void clickOnotp5()
+	{
+		otp5.click();
+	}
+	public void clickOnotp6()
+	{
+		otp6.click();
+	}
+	
+	
 }

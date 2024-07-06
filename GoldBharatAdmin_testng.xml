@@ -3,8 +3,7 @@
 <suite thread-count="1"  name="Suite">
   <test thread-count="1"  name="Test">
     <classes>
-      
-       <class name="GoldBharat.RegistrationPage"/>
+      <class name="GoldBharat.AdminLogin"/>
          </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

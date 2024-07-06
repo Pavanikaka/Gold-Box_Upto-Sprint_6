@@ -6,6 +6,7 @@ import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -30,8 +31,6 @@ public class Login extends GoldBharat_BaseClass {
 	@Test(priority = 1, groups = "GoldBharatLogin")
 	public void login() throws InterruptedException, EncryptedDocumentException, IOException {
 
-		// WebDriver driver = new ChromeDriver();
-		// driver.get("https://goldbharat.com/");
 		GoldBharat_LoginPage loginPage = new GoldBharat_LoginPage(driver);
 		Thread.sleep(1000);
 		loginPage.clickOnLoginBtn();
@@ -42,11 +41,48 @@ public class Login extends GoldBharat_BaseClass {
 		Thread.sleep(1000);
 
 		loginPage.clickOnSubmitBtn();
+		
+		Thread.sleep(2000);
+		
+		String otp = eUtility.readDataFromExcel("GoldBharat", 2, 1);
+		
+	      char Char1 = otp.charAt(0);  // Get character at index i
+	        String otp1 = Character.toString(Char1);  // Convert char to String
+	        char Char2 = otp.charAt(1);  // Get character at index i
+	        String otp2 = Character.toString(Char2);  // Convert char to String
+	        char Char3 = otp.charAt(2);  // Get character at index i
+	        String otp3 = Character.toString(Char3);  // Convert char to String
+	        char Char4 = otp.charAt(3);  // Get character at index i
+	        String otp4 = Character.toString(Char4);  // Convert char to String
+	        char Char5 = otp.charAt(4);  // Get character at index i
+	        String otp5 = Character.toString(Char5);  // Convert char to String
+	        char Char6 = otp.charAt(5);  // Get character at index i
+	        String otp6 = Character.toString(Char6);  // Convert char to String
+	//	String otp1 = eUtility.readDataFromExcel("GoldBharat", 2, 1);
+	//	String otp2 = eUtility.readDataFromExcel("GoldBharat", 3, 1);
+	//	String otp3 = eUtility.readDataFromExcel("GoldBharat", 4, 1);
+	//	String otp4 = eUtility.readDataFromExcel("GoldBharat", 5, 1);
+	//	String otp5 = eUtility.readDataFromExcel("GoldBharat", 6, 1);
+	//	String otp6 = eUtility.readDataFromExcel("GoldBharat", 7, 1);
+		loginPage.clickOnotp1();
+		loginPage.getotp1().sendKeys(otp1);
+		loginPage.clickOnotp2();
+		loginPage.getotp2().sendKeys(otp2);
+		loginPage.clickOnotp3();
+		loginPage.getotp3().sendKeys(otp3);
+		loginPage.clickOnotp4();
+		loginPage.getotp4().sendKeys(otp4);
+		loginPage.clickOnotp5();
+		loginPage.getotp5().sendKeys(otp5);
+		loginPage.clickOnotp6();
+		loginPage.getotp6().sendKeys(otp6);
+		
 
-	}
+//	}
 	/*
 	 * @Test(priority = 1, groups = "GoldBharatLogin") public void loginTest() {
 	 * 
 	 * }
 	 */
+}
 }
