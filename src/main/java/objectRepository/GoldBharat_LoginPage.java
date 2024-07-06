@@ -12,6 +12,8 @@ public class GoldBharat_LoginPage {
     @FindBy(xpath="//button[@class='loginbotn']")private WebElement LoginBtn;
     @FindBy(xpath="//input[@placeholder=' Enter Your Number']")private WebElement PhnNum;
     @FindBy(xpath="//button[@type='submit']")private WebElement SubmitBtn;
+   
+    
     
        
      

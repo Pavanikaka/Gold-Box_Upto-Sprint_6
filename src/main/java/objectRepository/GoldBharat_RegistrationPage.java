@@ -11,13 +11,13 @@ public class GoldBharat_RegistrationPage {
 
     @FindBy(xpath="//button[@class='registerbotn']")private WebElement RegisterBtn;
     @FindBy(xpath="//input[@formcontrolname='businessName']")private WebElement BusinessName;
-    @FindBy(xpath="//input[@placeholder=' Ex: Kumar']")private WebElement PersonName;
-    @FindBy(xpath="//input[@placeholder='Ex: *********@gmail.com']")private WebElement Email;
-    @FindBy(xpath="//input[@placeholder=' Ex: +91**********']")private WebElement PhoneNumber;
-    @FindBy(xpath="//input[@date=' formcontrolname']")private WebElement date;
+    @FindBy(xpath="//input[@formcontrolname='personName']")private WebElement PersonName;
+    @FindBy(xpath="//input[@formcontrolname='email']")private WebElement Email;
+    @FindBy(xpath="//input[@formcontrolname='phone']")private WebElement PhoneNumber;
+    @FindBy(xpath="//input[@formcontrolname='establishedDate']")private WebElement date;
     
-    @FindBy(xpath="//input[@placeholder=' Ex: 5*****']")private WebElement PinCode;
-    @FindBy(xpath="//button[@placeholder='submit']")private WebElement Register;
+    @FindBy(xpath="//input[@formcontrolname='pincode']")private WebElement PinCode;
+    @FindBy(xpath="//button[@type='submit']")private WebElement Register;
        
      
 	//Create a constructor to initialize these elements
