@@ -50,5 +50,10 @@ public class LoginPage {
 		SignInBtn.click();
 		Thread.sleep(2000);
 	}
+
+	public static void clickOnRegisterBtn() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
