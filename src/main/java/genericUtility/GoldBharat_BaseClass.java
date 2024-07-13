@@ -1,5 +1,8 @@
 
 package genericUtility;
+import java.util.Arrays;
+import java.util.Set;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -26,8 +29,9 @@ public class GoldBharat_BaseClass {
 	public ExcelFileUtility eUtility=new ExcelFileUtility();
 	public PropertyFileUtility pUtility=new PropertyFileUtility();
 	
-	public WebDriver driver;
+	public static WebDriver driver;
 	public static WebDriver sDriver;
+	private String originalHandle;
 	
 	   @BeforeSuite(alwaysRun = true)
 		public void bsConfig()
@@ -43,12 +47,15 @@ public class GoldBharat_BaseClass {
 			
 			if(BROWSER.equalsIgnoreCase("Chrome"))
 			{
+			
 				ChromeOptions options=new ChromeOptions();
-				options.addArguments("--remote-allow-origins=*");
+			
+								options.addArguments("--remote-allow-origins=*");
 				WebDriverManager.chromedriver().clearDriverCache().setup();
 				WebDriverManager.chromedriver().clearResolutionCache().setup();
 				WebDriverManager.chromedriver().setup();
 				driver=new ChromeDriver(options);
+				originalHandle = driver.getWindowHandle();
 				System.out.println("Chrome Browser Launched Successfully");
 			}
 			else if(BROWSER.equalsIgnoreCase("Firefox"))
@@ -86,62 +93,17 @@ public class GoldBharat_BaseClass {
 			wUtility.waitUntilPageLoad(driver);
 			driver.get(URL);
 		}
-	/*	
-	//@BeforeMethod(groups={"sprint-1","Sprint-2"})
-		public void bmConfig() throws Exception, Exception
-		{
-		    String USERNAME = pUtility.readDataFromPropertyFile("username");
-		    String PASSWORD = pUtility.readDataFromPropertyFile("password");
-		    Thread.sleep(2000);
-		    LoginPage lPage = new LoginPage(driver);
-		    Thread.sleep(1000);
-		    lPage.loginToApplication(USERNAME, PASSWORD);
-		    Thread.sleep(6000);
-			System.out.println("---Login successfully---");
-		}
-        
-	//@AfterMethod(groups={"sprint-1","Sprint-2"})
-		public void amConfig() throws Exception
-		{
-//			ExcelFileUtility eUtil = new ExcelFileUtility();
-//		    String ImagePath = eUtil.readDataFromExcel("ImagePath", 0, 1);
-			
-		    Thread.sleep(4000);
-		    DashboardPage dbPage = new DashboardPage(driver);
-		    dbPage.getUserNameDrpDwn().click();
-		    Thread.sleep(1000);
-		    MyProfilePage mpPage = new MyProfilePage(driver);
-		    mpPage.logoutOfApplication();
-		    
-		    System.out.println("Logout Successfully");
-		}
-        
-	//@AfterClass(groups={"sprint-1","Sprint-2"})
-		public void acConfig() throws InterruptedException
-		{
-		try 
-		{
-			Thread.sleep(1000);
-		} 
-		catch (Exception e) 
-		{
-			Thread.sleep(1000);
-		}
-		finally 
-		{
-			driver.quit();
-			System.out.println("Browser Closed Successfully");
-		}
-		}
-        
-	@AfterSuite(groups={"sprint-1","Sprint-2"})
-		public void asConfig()
-		{
-		   System.out.println("---Database Closed Successful---");
-		}
+	  
 
-*/
-	
+	  
+/*	  @AfterSuite
+	    public void tearDown() {
+	        if (driver != null) {
+	            driver.quit();
+	        }
+	    }
+		*/
+	 
 	
 	
 
