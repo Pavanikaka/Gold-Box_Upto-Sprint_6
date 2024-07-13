@@ -5,6 +5,10 @@
     <classes>
       
        <class name="GoldBharat.RegistrationPage"/>
+       
+       <class name="LoginPage_Dashboard.java"/>
+       
+       
          </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

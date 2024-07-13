@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GoldBharat.RegistrationPage">
+      <class name="GoldBharat.Login">
         <methods>
-          <include name="Registration"/>
           <include name="bsConfig"/>
           <include name="bcConfig"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- GoldBharat.RegistrationPage -->
+      </class> <!-- GoldBharat.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

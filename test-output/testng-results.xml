@@ -1,28 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-07T02:04:47 IST" name="Suite" finished-at="2024-07-07T02:05:15 IST" duration-ms="27579">
+  <suite started-at="2024-07-13T12:47:26 EDT" name="Default suite" finished-at="2024-07-13T12:48:58 EDT" duration-ms="92254">
     <groups>
-      <group name="GoldBharatRegister">
-        <method signature="RegistrationPage.Registration()[pri:1, instance:GoldBharat.RegistrationPage@4bdeaabb]" name="Registration" class="GoldBharat.RegistrationPage"/>
-      </group> <!-- GoldBharatRegister -->
+      <group name="GoldBharatLogin">
+        <method signature="Login.login()[pri:1, instance:GoldBharat.Login@7dcf94f8]" name="login" class="GoldBharat.Login"/>
+      </group> <!-- GoldBharatLogin -->
     </groups>
-    <test started-at="2024-07-07T02:04:47 IST" name="Test" finished-at="2024-07-07T02:05:15 IST" duration-ms="27579">
-      <class name="GoldBharat.RegistrationPage">
-        <test-method is-config="true" signature="bsConfig()[pri:0, instance:GoldBharat.RegistrationPage@4bdeaabb]" started-at="2024-07-07T02:04:47 IST" name="bsConfig" finished-at="2024-07-07T02:04:47 IST" duration-ms="21" status="PASS">
+    <test started-at="2024-07-13T12:47:26 EDT" name="Default test" finished-at="2024-07-13T12:48:58 EDT" duration-ms="92254">
+      <class name="GoldBharat.Login">
+        <test-method is-config="true" signature="bsConfig()[pri:0, instance:GoldBharat.Login@7dcf94f8]" started-at="2024-07-13T12:47:26 EDT" name="bsConfig" finished-at="2024-07-13T12:47:26 EDT" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bsConfig -->
-        <test-method is-config="true" signature="bcConfig()[pri:0, instance:GoldBharat.RegistrationPage@4bdeaabb]" started-at="2024-07-07T02:04:47 IST" name="bcConfig" finished-at="2024-07-07T02:04:54 IST" duration-ms="6788" status="PASS">
+        <test-method is-config="true" signature="bcConfig()[pri:0, instance:GoldBharat.Login@7dcf94f8]" started-at="2024-07-13T12:47:26 EDT" name="bcConfig" finished-at="2024-07-13T12:47:37 EDT" duration-ms="10766" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bcConfig -->
-        <test-method signature="Registration()[pri:1, instance:GoldBharat.RegistrationPage@4bdeaabb]" started-at="2024-07-07T02:04:54 IST" name="Registration" finished-at="2024-07-07T02:05:15 IST" duration-ms="20755" status="PASS">
+        <test-method signature="login()[pri:1, instance:GoldBharat.Login@7dcf94f8]" started-at="2024-07-13T12:47:37 EDT" name="login" finished-at="2024-07-13T12:48:58 EDT" duration-ms="81389" status="FAIL">
+          <exception class="org.openqa.selenium.InvalidArgumentException">
+            <message>
+              <![CDATA[invalid argument
+  (Session info: chrome=120.0.6099.72)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [43fc53025c51b31e3c07dda675f7cd93, clickElement {id=5268EBB305C950BE4810763AA705FAA5_element_52}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.72, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50305}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50305/devtoo..., se:cdpVersion: 120.0.6099.72, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (43fc53025c51b31e3c07dda675f7cd93)] -> xpath: //input[@formcontrolname='proprietor_pan_image']]
+Session ID: 43fc53025c51b31e3c07dda675f7cd93]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=120.0.6099.72)
+Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [43fc53025c51b31e3c07dda675f7cd93, clickElement {id=5268EBB305C950BE4810763AA705FAA5_element_52}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.72, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50305}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50305/devtoo..., se:cdpVersion: 120.0.6099.72, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (43fc53025c51b31e3c07dda675f7cd93)] -> xpath: //input[@formcontrolname='proprietor_pan_image']]
+Session ID: 43fc53025c51b31e3c07dda675f7cd93
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+at objectRepository.GoldBharat_LoginPage.clickOnUploadPan(GoldBharat_LoginPage.java:347)
+at GoldBharat.Login.login(Login.java:210)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.InvalidArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Registration -->
-      </class> <!-- GoldBharat.RegistrationPage -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- login -->
+      </class> <!-- GoldBharat.Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

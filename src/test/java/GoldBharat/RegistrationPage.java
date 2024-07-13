@@ -87,7 +87,7 @@ public class RegistrationPage extends GoldBharat_BaseClass {
 			wUtility.scrollPageDown(3);
 			RegistrationPage.clickOnCircle();
 			
-			wUtility.scrollPageDown(1);
+			//wUtility.scrollPageDown(1);
 			Thread.sleep(1000);
 			String businessAddress = eUtility.readDataFromExcel("GoldBharat", 9, 1);
 			RegistrationPage.clickOnbusinessAddress();
