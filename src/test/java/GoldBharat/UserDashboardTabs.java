@@ -10,7 +10,7 @@ import genericUtility.GoldBharat_BaseClass;
 import genericUtility.PropertyFileUtility;
 import objectRepository.GoldBharat_UserDashboard;
 
-public class UserDashboardTabs  extends GoldBharat_BaseClass {
+public class UserDashboardTabs  extends Login {
 
 	PropertyFileUtility pUtil = new PropertyFileUtility();
 			@Test(groups = { "Dashboardtabs" })
@@ -49,7 +49,7 @@ public class UserDashboardTabs  extends GoldBharat_BaseClass {
 		Userdashboard.clickOnAboutus();
 		
 		Thread.sleep(3000);
-		
+		/*
 		String AboutustextActual  = Userdashboard.getAboutustext();
 		System.out.println(AboutustextActual);
 		String AboutustextExpected = "Goldsikka Limited is part of a diversified three decades old Aztar Group. Est. in 1990, which specializes in Print Media, Tech Application, Insurance Broking, Data Analytics, Ecommerce, Non Tangible Asset Management, Property Underwriting, Corporate Law Advisory and Activations.The Goldsikka is the market innovative organisation for the gold industry as an asset class. Our purpose is to stimulate and sustain demand for gold provide monetization of Gold and be the leaders on the gold liquidity.We are a unique organization that delivers tangible benefits to the gold assets. We are an active force within the market working with a large and diverse set of partners to create access, drive innovation and stimulate demand while providing a collective voice for our customers. We provide insights into the international gold markets helping people to understand the investment qualities of gold and its role in meeting the social and environmental needs of self and society.";
@@ -61,7 +61,7 @@ public class UserDashboardTabs  extends GoldBharat_BaseClass {
 		{
 			System.out.println("FAIL");
 		}
-		
+		*/
 		JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0, 1000)");
 

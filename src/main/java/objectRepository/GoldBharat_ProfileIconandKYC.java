@@ -17,8 +17,10 @@ public class GoldBharat_ProfileIconandKYC {
 	    
 	    @FindBy(xpath="//input[@formcontrolname='proprietor_name']")private WebElement ProprietorName;
 	    @FindBy(xpath="//input[@formcontrolname='proprietor_pan']")private WebElement ProprietorPan;
+	   @FindBy(xpath="//input[@formcontrolname='proprietor_pan_image']")private WebElement proprietor_pan_image;
+	   @FindBy(xpath="//input[@formcontrolname='proprietor_gst_image']")private WebElement proprietor_gst_image;
 	   
-	    @FindBy(xpath="//input[@formcontrolname='proprietor_gst']")private WebElement ProprietorGSTNO;
+	  	    @FindBy(xpath="//input[@formcontrolname='proprietor_gst']")private WebElement ProprietorGSTNO;
 	    @FindBy(xpath="//input[@formcontrolname='bank_name']")private WebElement BankName;
 	    @FindBy(xpath="//input[@formcontrolname='account_number']")private WebElement AccountNumber;
 	    @FindBy(xpath="//input[@formcontrolname='ifsc_code']")private WebElement IFSCCode;
@@ -46,10 +48,15 @@ public class GoldBharat_ProfileIconandKYC {
 			return ProprietorPan;
 		}
 		
+		public WebElement getproprietor_pan_image() {
+			return proprietor_pan_image;
+		}
 		public WebElement getProfileIcon() {
 			return ProfileIcon;
 		}
-		
+		public WebElement getproprietor_gst_image() {
+			return proprietor_gst_image;
+		}
 		
 		public WebElement getProprietorGSTNO() {
 			return ProprietorGSTNO;
@@ -142,15 +149,27 @@ public class GoldBharat_ProfileIconandKYC {
 			AccountNumber.click();
 		}
 
-
+		
+public void clickOnproprietor_gst_image() {
+			
+			proprietor_gst_image.click();
+			
+			
+		}
 		public void clickOnProfileIcon() {
 			
 			ProfileIcon.click();
 			
 			
 		}
-
-
+		
+public void clickOnproprietor_pan_image() {
+			
+	proprietor_pan_image.click();
+			
+			
+		}
+		
 		public void clickOnIFSCCode() {
 			IFSCCode.click();
 			

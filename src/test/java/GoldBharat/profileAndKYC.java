@@ -11,7 +11,7 @@ import objectRepository.GoldBharat_ProfileIconandKYC;
 import objectRepository.GoldBharat_UserDashboard;
 
 
-public class profileAndKYC  extends GoldBharat_BaseClass {
+public class profileAndKYC  extends Login {
 
 	PropertyFileUtility pUtil = new PropertyFileUtility();
 	
@@ -77,10 +77,16 @@ public class profileAndKYC  extends GoldBharat_BaseClass {
 							Thread.sleep(2000);
 							
 
-							
+					//	String filePath = "C:\\Users\\sures\\OneDrive\\Desktop\\Spiderman-nowayhome.png";  working one from folder
+					/*		String panfilePath = "/Fms_Goldbox_Xyug/src/test/java/GoldBharat/spiderman_head.jpg";
+							profile.getproprietor_pan_image().sendKeys(System.getProperty("user.dir") +panfilePath);
+							Thread.sleep(3000);
+							String gstpanfilePath = "/Fms_Goldbox_Xyug/src/test/java/GoldBharat/spiderman-download.jpg";
+							profile.getproprietor_pan_image().sendKeys(System.getProperty("user.dir") + gstpanfilePath);  */
 				
 							
 							
+							Thread.sleep(3000);
 			profile.clickOnProprietorGSTNO();
 							
 							profile.getProprietorGSTNO().sendKeys("22AAAAA0000A1Z5", Keys.TAB,Keys.TAB);
