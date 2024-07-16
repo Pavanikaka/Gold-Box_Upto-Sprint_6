@@ -2,8 +2,12 @@ package GoldBharat;
 
 
 import java.io.IOException;
+import java.util.Set;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import genericUtility.GoldBharat_BaseClass;
@@ -12,6 +16,7 @@ import objectRepository.GoldBharat_UserDashboard;
 
 public class UserDashboardTabs  extends Login {
 
+	private static final WebElement Facebook = null;
 	PropertyFileUtility pUtil = new PropertyFileUtility();
 			@Test(groups = { "Dashboardtabs" })
 		public void UserDashboardTab() throws InterruptedException, IOException  {
@@ -74,37 +79,93 @@ public class UserDashboardTabs  extends Login {
 		
 		Thread.sleep(3000);
 		
+		 Actions actions = new Actions(driver);
+
+	     // Perform key press action to scroll to the bottom
+	     actions.keyDown(Keys.CONTROL).sendKeys(Keys.END).perform();
+	        Thread.sleep(3000);
+
 	
 		
 		Userdashboard.clickOnFacebook();
 		
 		Thread.sleep(3000);
-		JavascriptExecutor js1 = (JavascriptExecutor) driver;
-        js1.executeScript("window.history.back()");
+		String mainWindowHandle = driver.getWindowHandle();
+		// Switch to the new window
+        Set<String> handles = driver.getWindowHandles();
+        String newWindowHandle = "";
+        for (String handle : handles) {
+            if (!handle.equals(mainWindowHandle)) {
+                newWindowHandle = handle;
+                break;
+            }
+        }
+        driver.switchTo().window(newWindowHandle);
+
+        
+        driver.close();
+
+        // Switch back to the main window
+        driver.switchTo().window(mainWindowHandle);
+
+       
         JavascriptExecutor js2 = (JavascriptExecutor) driver;
-        js2.executeScript("window.scrollBy(0, 1000)");
+        js2.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        
         Thread.sleep(3000);
         
         Userdashboard.clickOnInstagram();
 		
 		Thread.sleep(3000);
-		JavascriptExecutor js21 = (JavascriptExecutor) driver;
-        js21.executeScript("window.history.back()");
-        JavascriptExecutor js3 = (JavascriptExecutor) driver;
-        js3.executeScript("window.scrollBy(0, 1000)");
+		
+		String mainWindowHandle1 = driver.getWindowHandle();
+		// Switch to the new window
+       Set<String> handles1 = driver.getWindowHandles();
+        String newWindowHandle1 = "";
+        for (String handle : handles1) {
+            if (!handle.equals(mainWindowHandle1)) {
+                newWindowHandle1 = handle;
+                break;
+            }
+        }
+        driver.switchTo().window(newWindowHandle1);
+
+        
+        driver.close();
+
+        // Switch back to the main window
+        driver.switchTo().window(mainWindowHandle1);
+
+       
+        //JavascriptExecutor js2 = (JavascriptExecutor) driver;
+        js2.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        
+        Thread.sleep(3000);
+
+        
+        
+
+        // Switch back to the main window
+       // driver.switchTo().window(mainWindowHandle);
+		//JavascriptExecutor js21 = (JavascriptExecutor) driver;
+        //js21.executeScript("window.history.back()");
+        //JavascriptExecutor js3 = (JavascriptExecutor) driver;
+       // js3.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         Userdashboard.clickOnLinkedin();
 		
 		Thread.sleep(3000);
 		JavascriptExecutor js31 = (JavascriptExecutor) driver;
         js31.executeScript("window.history.back()");
         JavascriptExecutor js4 = (JavascriptExecutor) driver;
-        js4.executeScript("window.scrollBy(0, 1000)");
+        js4.executeScript("window.scrollTo(0, document.body.scrollHeight)");
         Userdashboard.clickOnTwitter();
 		
 		Thread.sleep(5000);
 		JavascriptExecutor js41 = (JavascriptExecutor) driver;
         js41.executeScript("window.history.back()");
-                 
+        
+        Thread.sleep(3000);
+                 driver.quit();
 					
 
 }

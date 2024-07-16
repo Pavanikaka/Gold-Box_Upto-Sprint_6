@@ -18,20 +18,24 @@ public class GoldBharat_ProfileIconandKYC {
 	    @FindBy(xpath="//input[@formcontrolname='proprietor_name']")private WebElement ProprietorName;
 	    @FindBy(xpath="//input[@formcontrolname='proprietor_pan']")private WebElement ProprietorPan;
 	   @FindBy(xpath="//input[@formcontrolname='proprietor_pan_image']")private WebElement proprietor_pan_image;
-	   @FindBy(xpath="//input[@formcontrolname='proprietor_gst_image']")private WebElement proprietor_gst_image;
+	   
 	   
 	  	    @FindBy(xpath="//input[@formcontrolname='proprietor_gst']")private WebElement ProprietorGSTNO;
+	  	  @FindBy(xpath="//input[@formcontrolname='proprietor_gst_image']")private WebElement proprietor_gst_image;
 	    @FindBy(xpath="//input[@formcontrolname='bank_name']")private WebElement BankName;
 	    @FindBy(xpath="//input[@formcontrolname='account_number']")private WebElement AccountNumber;
 	    @FindBy(xpath="//input[@formcontrolname='ifsc_code']")private WebElement IFSCCode;
 	    @FindBy(xpath="//input[@formcontrolname='account_holder_name']")private WebElement HolderName;
+	    @FindBy(xpath="//button[@class='Submit-botnss ng-star-inserted']")private WebElement SubmitButton;
+		
+	    
 	
 	    
 
 		
 		public GoldBharat_ProfileIconandKYC(WebDriver driver) {
 			PageFactory.initElements(driver, this);
-			// TODO Auto-generated constructor stub
+			
 		}
 		public WebElement getKYC() {
 			return KYC;
@@ -51,6 +55,10 @@ public class GoldBharat_ProfileIconandKYC {
 		public WebElement getproprietor_pan_image() {
 			return proprietor_pan_image;
 		}
+		
+		public WebElement getProprietorGSTNO() {
+			return ProprietorGSTNO;
+		}
 		public WebElement getProfileIcon() {
 			return ProfileIcon;
 		}
@@ -58,9 +66,7 @@ public class GoldBharat_ProfileIconandKYC {
 			return proprietor_gst_image;
 		}
 		
-		public WebElement getProprietorGSTNO() {
-			return ProprietorGSTNO;
-		}
+		
 		public WebElement getBankName() {
 			return BankName;
 		}
@@ -72,6 +78,9 @@ public class GoldBharat_ProfileIconandKYC {
 		}
 		public WebElement getHolderName() {
 			return HolderName;
+		}
+		public WebElement getSubmitButton() {
+			return SubmitButton;
 		}
 	//Business Libraries
 	
@@ -101,7 +110,7 @@ public class GoldBharat_ProfileIconandKYC {
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
-			// TODO Auto-generated method stub
+			
 			return false;
 		}
 	public void clickOnclose() {
@@ -110,7 +119,7 @@ public class GoldBharat_ProfileIconandKYC {
 		}
 
 		public Object navigate() {
-			// TODO Auto-generated method stub
+			
 			return null;
 		}
 		
@@ -129,14 +138,27 @@ public class GoldBharat_ProfileIconandKYC {
 			
 		}
 		
+		public void clickOnproprietor_pan_image() {
+			
+			proprietor_pan_image.click();
+					
+					
+				}
+		
+		
 
 		public void clickOnProprietorGSTNO() {
 			
 			ProprietorGSTNO.click();
-			// TODO Auto-generated method stub
+			                     
 			
 		}
-
+public void clickOnproprietor_gst_image() {
+			
+			proprietor_gst_image.click();
+			
+			
+		}
 
 		public void clickOnBankName() {
 		BankName.click();
@@ -150,12 +172,7 @@ public class GoldBharat_ProfileIconandKYC {
 		}
 
 		
-public void clickOnproprietor_gst_image() {
-			
-			proprietor_gst_image.click();
-			
-			
-		}
+
 		public void clickOnProfileIcon() {
 			
 			ProfileIcon.click();
@@ -163,12 +180,7 @@ public void clickOnproprietor_gst_image() {
 			
 		}
 		
-public void clickOnproprietor_pan_image() {
-			
-	proprietor_pan_image.click();
-			
-			
-		}
+
 		
 		public void clickOnIFSCCode() {
 			IFSCCode.click();
@@ -178,8 +190,12 @@ public void clickOnproprietor_pan_image() {
 			HolderName.click();
 			
 		}
-
-	
-	
-
+		public void clickOnSubmitButton() {
+			SubmitButton.click();
+			
+		}
 }
+	
+	
+
+

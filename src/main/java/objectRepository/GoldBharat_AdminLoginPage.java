@@ -15,10 +15,16 @@ public class GoldBharat_AdminLoginPage {
     @FindBy(xpath="//input[@formcontrolname='password']")private WebElement AdminPwd;
     @FindBy(xpath="//button[@type='submit']")private WebElement AdminLoginBtn;
     @FindBy(xpath="//p[contains(text(), 'Manage')]")private WebElement ManageLink;
+    @FindBy(xpath="//td[text()='3']")private WebElement serialno3;
     
    
     
-  @FindBy(xpath="//i[@class='fa fa-pencil']")private WebElement ActionEdit;
+ // @FindBy(xpath="//i[@class='fa fa-pencil'])")private WebElement ActionEdit;
+    
+    @FindBy(xpath="//td[@_ngcontent-ng-c2925180776]")private WebElement ActionEdit;
+    
+   
+    
   
   @FindBy(xpath="//input[@formcontrolname='silver_max_limit']")private WebElement Silverlimit;
   
@@ -76,6 +82,11 @@ public class GoldBharat_AdminLoginPage {
 	public void clickOnManageLink()
 	{
 		ManageLink.click();
+	}
+	
+	public void clickOnserialno3()
+	{
+		serialno3.click();
 	}
 	public void clickOnActionEdit()
 	{
