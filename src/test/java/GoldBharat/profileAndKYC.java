@@ -141,7 +141,7 @@ public class profileAndKYC  extends Login {
 							
 			profile.clickOnHolderName();
 							
-							profile.getHolderName().sendKeys("Pavani");
+							profile.getHolderName().sendKeys("Pavani", Keys.TAB,Keys.ENTER);
 							
 							Thread.sleep(2000);  
 							
@@ -152,8 +152,8 @@ public class profileAndKYC  extends Login {
 
 		//Click on Submit Button
 							
-		profile.clickOnSubmitButton();
-		Thread.sleep(2000);
+		//profile.clickOnSubmitButton();
+		//Thread.sleep(2000);
                  
 					
 

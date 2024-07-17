@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-16T12:34:48 EDT" name="Default suite" finished-at="2024-07-16T12:36:04 EDT" duration-ms="76835">
+  <suite started-at="2024-07-17T01:30:26 EDT" name="Default suite" finished-at="2024-07-17T01:30:57 EDT" duration-ms="30124">
     <groups>
-      <group name="Dashboardtabs">
-        <method signature="UserDashboardTabs.UserDashboardTab()[pri:0, instance:GoldBharat.UserDashboardTabs@662ac478]" name="UserDashboardTab" class="GoldBharat.UserDashboardTabs"/>
-      </group> <!-- Dashboardtabs -->
+      <group name="KYC">
+        <method signature="LiveRates.LiveRatesmethod()[pri:0, instance:GoldBharat.LiveRates@662ac478]" name="LiveRatesmethod" class="GoldBharat.LiveRates"/>
+      </group> <!-- KYC -->
     </groups>
-    <test started-at="2024-07-16T12:34:48 EDT" name="Default test" finished-at="2024-07-16T12:36:04 EDT" duration-ms="76835">
-      <class name="GoldBharat.UserDashboardTabs">
-        <test-method is-config="true" signature="bsConfig()[pri:0, instance:GoldBharat.UserDashboardTabs@662ac478]" started-at="2024-07-16T12:34:48 EDT" name="bsConfig" finished-at="2024-07-16T12:34:48 EDT" duration-ms="9" status="PASS">
+    <test started-at="2024-07-17T01:30:26 EDT" name="Default test" finished-at="2024-07-17T01:30:57 EDT" duration-ms="30124">
+      <class name="GoldBharat.LiveRates">
+        <test-method is-config="true" signature="bsConfig()[pri:0, instance:GoldBharat.LiveRates@662ac478]" started-at="2024-07-17T01:30:26 EDT" name="bsConfig" finished-at="2024-07-17T01:30:26 EDT" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bsConfig -->
-        <test-method is-config="true" signature="bcConfig()[pri:0, instance:GoldBharat.UserDashboardTabs@662ac478]" started-at="2024-07-16T12:34:48 EDT" name="bcConfig" finished-at="2024-07-16T12:34:55 EDT" duration-ms="6966" status="PASS">
+        <test-method is-config="true" signature="bcConfig()[pri:0, instance:GoldBharat.LiveRates@662ac478]" started-at="2024-07-17T01:30:26 EDT" name="bcConfig" finished-at="2024-07-17T01:30:38 EDT" duration-ms="11822" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bcConfig -->
-        <test-method is-config="true" signature="login()[pri:0, instance:GoldBharat.UserDashboardTabs@662ac478]" started-at="2024-07-16T12:34:55 EDT" name="login" finished-at="2024-07-16T12:35:06 EDT" duration-ms="11575" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:GoldBharat.LiveRates@662ac478]" started-at="2024-07-17T01:30:38 EDT" name="login" finished-at="2024-07-17T01:30:53 EDT" duration-ms="14494" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="UserDashboardTab()[pri:0, instance:GoldBharat.UserDashboardTabs@662ac478]" started-at="2024-07-16T12:35:06 EDT" name="UserDashboardTab" finished-at="2024-07-16T12:36:04 EDT" duration-ms="58243" status="PASS">
+        <test-method signature="LiveRatesmethod()[pri:0, instance:GoldBharat.LiveRates@662ac478]" started-at="2024-07-17T01:30:53 EDT" name="LiveRatesmethod" finished-at="2024-07-17T01:30:57 EDT" duration-ms="3723" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UserDashboardTab -->
-      </class> <!-- GoldBharat.UserDashboardTabs -->
+        </test-method> <!-- LiveRatesmethod -->
+      </class> <!-- GoldBharat.LiveRates -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

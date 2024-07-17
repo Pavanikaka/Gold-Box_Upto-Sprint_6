@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GoldBharat.UserDashboardTabs">
+      <class name="GoldBharat.LiveRates">
         <methods>
-          <include name="UserDashboardTab"/>
           <include name="bsConfig"/>
           <include name="bcConfig"/>
           <include name="login"/>
+          <include name="LiveRatesmethod"/>
         </methods>
-      </class> <!-- GoldBharat.UserDashboardTabs -->
+      </class> <!-- GoldBharat.LiveRates -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

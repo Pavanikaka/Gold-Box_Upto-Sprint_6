@@ -4,6 +4,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 public class GoldBharat_ProfileIconandKYC {
@@ -26,7 +27,8 @@ public class GoldBharat_ProfileIconandKYC {
 	    @FindBy(xpath="//input[@formcontrolname='account_number']")private WebElement AccountNumber;
 	    @FindBy(xpath="//input[@formcontrolname='ifsc_code']")private WebElement IFSCCode;
 	    @FindBy(xpath="//input[@formcontrolname='account_holder_name']")private WebElement HolderName;
-	    @FindBy(xpath="//button[@class='Submit-botnss ng-star-inserted']")private WebElement SubmitButton;
+	    
+	    //@FindBy(xpath=  "//button[@class='Submit-botnss ng-star-inserted']")private WebElement SubmitButton;
 		
 	    
 	
@@ -79,9 +81,9 @@ public class GoldBharat_ProfileIconandKYC {
 		public WebElement getHolderName() {
 			return HolderName;
 		}
-		public WebElement getSubmitButton() {
-			return SubmitButton;
-		}
+		//public WebElement getSubmitButton() {
+			//return SubmitButton;
+		//}
 	//Business Libraries
 	
 		public boolean isProfileIconClickable() {
@@ -190,11 +192,11 @@ public void clickOnproprietor_gst_image() {
 			HolderName.click();
 			
 		}
-		public void clickOnSubmitButton() {
-			SubmitButton.click();
+		//public void clickOnSubmitButton() {
+			//SubmitButton.click();
 			
 		}
-}
+//}
 	
 	
 

@@ -60,12 +60,27 @@ public class AdminLogin extends GoldBharatAdmin_BaseClass {
 			}
 		}
 
-			 AdminloginPage.clickOnActionEdit(); Thread.sleep(2000);
+			 AdminloginPage.clickOnActionEdit(); 
+			 Thread.sleep(2000);
 			  JavascriptExecutor js = (JavascriptExecutor) driver;
-			 js.executeScript("window.scrollBy(0, 400)");
+			 js.executeScript("window.scrollBy(0, 300)");
 			  Thread.sleep(3000);
 			  js.executeScript("window.scrollBy(0, -300)");
 			  Thread.sleep(2000);
+			  
+			  //AdminloginPage.clickOnAccept();  
+			  
+			 // Thread.sleep(3000);
+			  
+			  AdminloginPage.clickOnManageDistributor();
+				Thread.sleep(2000);
+				
+				 AdminloginPage.clickOnActionEdit(); 
+				 Thread.sleep(2000);
+				  
+				 js.executeScript("window.scrollBy(0, 500)");
+				  Thread.sleep(3000);
+			  
 			  AdminloginPage.clickOnSilverlimit();
 
 			  AdminloginPage.getSilverlimit().sendKeys("10000");

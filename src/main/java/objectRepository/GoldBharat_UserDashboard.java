@@ -17,7 +17,7 @@ public class GoldBharat_UserDashboard {
     
     @FindBy(xpath="//li[@routerlink=\"/aboutus\"]")private WebElement Aboutus;
     
-  //  @FindBy(xpath="//p[contains(text(), 'Goldsikka Limited is part of a diversified three decades old Aztar Group')]")private String Aboutustext;
+  
     @FindBy(xpath="/html/body/app-root/app-layout/app-aboutus/section/div/div[2]/div/p/text()")private String Aboutustext;
     
     @FindBy(xpath="//img[contains(@src, '../../assets/googlplay.png') and @alt='']")private WebElement GooglePlayStore;

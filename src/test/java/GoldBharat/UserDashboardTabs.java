@@ -16,7 +16,7 @@ import objectRepository.GoldBharat_UserDashboard;
 
 public class UserDashboardTabs  extends Login {
 
-	private static final WebElement Facebook = null;
+	//private static final WebElement Facebook = null;
 	PropertyFileUtility pUtil = new PropertyFileUtility();
 			@Test(groups = { "Dashboardtabs" })
 		public void UserDashboardTab() throws InterruptedException, IOException  {
@@ -40,20 +40,30 @@ public class UserDashboardTabs  extends Login {
 		
 		Thread.sleep(3000);
 		
+		//Click on Notification bell
+		
 		Userdashboard.clickOnNotificationbell();
 		
+		//Click on LiveRates
 		
 		Userdashboard.clickOnLiveRates();
 		
 		Thread.sleep(7000);
 		
+		//Click on Aboutus
+		
+      Userdashboard.clickOnAboutus();
+		
+		Thread.sleep(3000);
+		
+		
+		//Click on Booking
+		
 		Userdashboard.clickOnBooking();
 		Thread.sleep(2000);
 		
 		
-		Userdashboard.clickOnAboutus();
 		
-		Thread.sleep(3000);
 		/*
 		String AboutustextActual  = Userdashboard.getAboutustext();
 		System.out.println(AboutustextActual);
@@ -68,105 +78,55 @@ public class UserDashboardTabs  extends Login {
 		}
 		*/
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0, 1000)");
+        js.executeScript("window.scrollBy(0, 2000)");
 
-		Thread.sleep(7000);
+		Thread.sleep(3000);
+		
+		//Click on Google Playstore
+		
 		Userdashboard.clickOnGooglePlayStore();
 		
 		Thread.sleep(3000);
+		
+		//Click on Apple Play store
 		
 		Userdashboard.clickOnAppStore();
 		
 		Thread.sleep(3000);
 		
-		 Actions actions = new Actions(driver);
-
-	     // Perform key press action to scroll to the bottom
-	     actions.keyDown(Keys.CONTROL).sendKeys(Keys.END).perform();
-	        Thread.sleep(3000);
-
-	
 		
-		Userdashboard.clickOnFacebook();
+		Actions actions = new Actions(driver); 
+		actions.keyDown(Keys.CONTROL).sendKeys(Keys.END).perform();
+		 
+		//Click On Facebook
 		
-		Thread.sleep(3000);
-		String mainWindowHandle = driver.getWindowHandle();
-		// Switch to the new window
-        Set<String> handles = driver.getWindowHandles();
-        String newWindowHandle = "";
-        for (String handle : handles) {
-            if (!handle.equals(mainWindowHandle)) {
-                newWindowHandle = handle;
-                break;
-            }
-        }
-        driver.switchTo().window(newWindowHandle);
-
-        
-        driver.close();
-
-        // Switch back to the main window
-        driver.switchTo().window(mainWindowHandle);
-
-       
-        JavascriptExecutor js2 = (JavascriptExecutor) driver;
-        js2.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        
-        Thread.sleep(3000);
-        
-        Userdashboard.clickOnInstagram();
+		 Userdashboard.clickOnFacebook();
+		 
+		 
+		 
+			Thread.sleep(3000);
+			
+		//Click On Instagram
+			
+	        Userdashboard.clickOnInstagram();
+			
+			Thread.sleep(3000);
+			
+			//Click on Linkedin
+	        
+	       Userdashboard.clickOnLinkedin();
+			
+			Thread.sleep(3000);
+			
+			// Click on Twitter
+			
+	        Userdashboard.clickOnTwitter();
+			
+			Thread.sleep(2000);
+			
+	        driver.close();        
+      
 		
-		Thread.sleep(3000);
-		
-		String mainWindowHandle1 = driver.getWindowHandle();
-		// Switch to the new window
-       Set<String> handles1 = driver.getWindowHandles();
-        String newWindowHandle1 = "";
-        for (String handle : handles1) {
-            if (!handle.equals(mainWindowHandle1)) {
-                newWindowHandle1 = handle;
-                break;
-            }
-        }
-        driver.switchTo().window(newWindowHandle1);
-
-        
-        driver.close();
-
-        // Switch back to the main window
-        driver.switchTo().window(mainWindowHandle1);
-
-       
-        //JavascriptExecutor js2 = (JavascriptExecutor) driver;
-        js2.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        
-        Thread.sleep(3000);
-
-        
-        
-
-        // Switch back to the main window
-       // driver.switchTo().window(mainWindowHandle);
-		//JavascriptExecutor js21 = (JavascriptExecutor) driver;
-        //js21.executeScript("window.history.back()");
-        //JavascriptExecutor js3 = (JavascriptExecutor) driver;
-       // js3.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        Userdashboard.clickOnLinkedin();
-		
-		Thread.sleep(3000);
-		JavascriptExecutor js31 = (JavascriptExecutor) driver;
-        js31.executeScript("window.history.back()");
-        JavascriptExecutor js4 = (JavascriptExecutor) driver;
-        js4.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        Userdashboard.clickOnTwitter();
-		
-		Thread.sleep(5000);
-		JavascriptExecutor js41 = (JavascriptExecutor) driver;
-        js41.executeScript("window.history.back()");
-        
-        Thread.sleep(3000);
-                 driver.quit();
-					
 
 }
 }
