@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Sprint_6_Negative.g_EventsAllActions">
+      <class name="GoldBharat.AdminLogin">
         <methods>
-          <include name="asConfig"/>
-          <include name="bmConfig"/>
-          <include name="eventsAllActionsTest"/>
-          <include name="amConfig"/>
           <include name="bcConfig"/>
           <include name="bsConfig"/>
-          <include name="acConfig"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- Sprint_6_Negative.g_EventsAllActions -->
+      </class> <!-- GoldBharat.AdminLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

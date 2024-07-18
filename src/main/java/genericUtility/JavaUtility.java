@@ -3,6 +3,7 @@
 import java.util.Date;
 import java.util.Random;
 
+
 /**
  * This class contains java specific methods
  * @param args
@@ -62,7 +63,7 @@ public class JavaUtility {
 			long mobileNumber=0;
 			for(;;)
 			{
-			   long rNum = r.nextLong(9873214563l);
+			   long rNum = r.nextLong();
 			   try 
 			   {
 				   if(rNum>9123456789l && rNum<9999999999l)
@@ -98,7 +99,7 @@ public class JavaUtility {
 		public Long getHighestRandomNumber()
 		{
 			Random r = new Random();
-			Long Num = r.nextLong(999999999999999999l);
+			Long Num = r.nextLong();
 			return Num;
 		}
 

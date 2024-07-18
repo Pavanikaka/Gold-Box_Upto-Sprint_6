@@ -43,13 +43,13 @@
     <version>5.8.0</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<!-- https://mvnrepository.com/artifact/org.testng/testng 
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>7.8.0</version>
     
-</dependency>
+</dependency>-->
 
 <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 <dependency>
@@ -149,6 +149,9 @@
   <plugin>
   <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-war-plugin</artifactId>
+<configuration>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </configuration>
   <version>3.3.1</version>
   </plugin>
   </plugins>
