@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class Ecommerce_SubCategoryPage {
 
@@ -17,6 +18,10 @@ public class Ecommerce_SubCategoryPage {
     @FindBy(xpath="//td[.='bangle']/following-sibling::td[.='Rose Gold Bangle']/../td/button[.=' Edit ']/..//div[@class='mdc-switch__ripple']")private WebElement ActionEnableDisableBootStrapBtn;
     
     @FindBy(xpath ="//td[.='Gold Chains']/following-sibling::td[.='Gods Idol chains']/..//button[@class='btn-sm btn-edit bg-danger']")private WebElement DeleteBtn;
+    
+    @FindBy(xpath="(//div[.=' Sub Category Updated Successfully '])[2]")private WebElement UpdateMsg;
+    
+    @FindBy(xpath="(//div[.=' Successfully Deleted '])[2]")private WebElement DeleteMsg;
     
     @FindBy(xpath="//a[text()=' Next ']")private WebElement NextPageLnk;
     
@@ -70,16 +75,55 @@ public class Ecommerce_SubCategoryPage {
 		driver.findElement(By.xpath("//td[.='"+SubCategoryName+"']/following-sibling::td/button[.=' Edit ']")).click();
 	}
 	
-	public void clickOnParticularCategoryBootstrapBtn(WebDriver driver, String SubCategoryName) throws Exception
+	public void clickOnParticularSubCategoryBootstrapBtnToDisableParticularSubCategory(WebDriver driver, String EditSubCategoryName) throws Exception
 	{
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//td[.='"+SubCategoryName+"']/following-sibling::td//div[@class='mdc-switch__icons']")).click();
+		driver.findElement(By.xpath("//td[.='"+EditSubCategoryName+"']/following-sibling::td//div[@class='mdc-switch__icons']")).click();
+		Thread.sleep(2000);
+		if(UpdateMsg.isDisplayed())
+		{
+			System.out.println("SubCategory Disabled Successfully");
+		}
+		else
+		{
+			System.out.println("SubCategory Not Updated");
+			Assert.fail();
+		}
+		Thread.sleep(3000);
+	}
+	
+	public void clickOnParticularSubCategoryBootstrapBtnToEnableParticularSubCategory(WebDriver driver, String EditSubCategoryName) throws Exception
+	{
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//td[.='"+EditSubCategoryName+"']/following-sibling::td//div[@class='mdc-switch__icons']")).click();
+		Thread.sleep(2000);
+		if(UpdateMsg.isDisplayed())
+		{
+			System.out.println("SubCategory Enabled Successfully");
+		}
+		else
+		{
+			System.out.println("SubCategory Not Updated");
+			Assert.fail();
+		}
+		Thread.sleep(3000);
 	}
 	
 	public void clickOnParticularSubCategoryDeleteBtn(WebDriver driver, String SubCategoryName) throws Exception
 	{
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//td[.='"+SubCategoryName+"']/following-sibling::td//button[@class='btn-sm btn-edit bg-danger']")).click();
+		driver.findElement(By.xpath("(//td[contains(.,'"+SubCategoryName+"')])[1]/following-sibling::td//button[@class='btn-sm btn-edit bg-danger']")).click();
+		Thread.sleep(2000);
+		if(DeleteMsg.isDisplayed())
+		{
+			System.out.println("SubCategory Deleted Successfully");
+		}
+		else
+		{
+			System.out.println("SubCategory Not Deleted");
+			Assert.fail();
+		}
+		Thread.sleep(3000);
 	}
 	
 }

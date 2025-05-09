@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class Ecommerce_BrandsPage {
 
@@ -14,11 +15,15 @@ public class Ecommerce_BrandsPage {
     
     @FindBy(xpath="//button[@data-bs-target='#addbrand']")private WebElement AddBrandBtn;
     //td[.='BrandName3021013']/following-sibling::td/img[@class='table-img']/../following-sibling::td/button[.=' Edit ']
-    @FindBy(xpath="//td[.='Gold Boxx']/following-sibling::td/img[@class='table-img']/../following-sibling::td/button[.=' Edit ']")private WebElement ActionEditBtn;
+    @FindBy(xpath="(//button[.=' Edit '])[1]")private WebElement ActionEditBtn;
     
-    @FindBy(xpath="//td[.='BrandName1803414']/..//td//img[@class='table-img']/../following-sibling::td//button[.=' Edit ']/..//div[@class='mdc-switch__icons']")private WebElement ActionEnableDisableBootStrapBtn;
+    @FindBy(xpath="(//div[@class='mdc-switch__icons'])[1]")private WebElement ActionEnableDisableBootStrapBtn;
     
-    @FindBy(xpath="//td[.='BrandName1803414']/..//td//img[@class='table-img']/../following-sibling::td//button[.=' Edit ']/..//button[@class='btn-sm btn-edit bg-danger']")private WebElement DeleteBtn;
+    @FindBy(xpath="(//button[@class='btn-sm btn-edit bg-danger'])[1]")private WebElement DeleteBtn;
+    
+    @FindBy(xpath="(//div[.=' Brand Updated Successfully '])[2]")private WebElement UpdateMsg;
+    
+    @FindBy(xpath="(//div[.=' Successfully Deleted '])[2]")private WebElement DeleteMsg;
     
     @FindBy(xpath="//a[text()=' Next ']")private WebElement NextPageLnk;
     
@@ -71,16 +76,51 @@ public class Ecommerce_BrandsPage {
 		driver.findElement(By.xpath("//td[.='"+BrandName+"']/following-sibling::td/img[@class='table-img']/../following-sibling::td/button[.=' Edit ']")).click();
 	}
 	
-	public void clickOnParticularBrandBootStrapBtn(WebDriver driver, String BrandName) throws Exception
+	public void clickOnParticularBrandBootStrapBtnToDisable(WebDriver driver, String BrandName) throws Exception
 	{
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//td[.='"+BrandName+"']/..//td//img[@class='table-img']/../following-sibling::td//button[.=' Edit ']/..//div[@class='mdc-switch__shadow']"));
+		driver.findElement(By.xpath("//td[.='"+BrandName+"']/..//td//img[@class='table-img']/../following-sibling::td//button[.=' Edit ']/..//div[@class='mdc-switch__icons']")).click();
+		Thread.sleep(2000);
+		if(UpdateMsg.isDisplayed())
+		{
+			System.out.println("Brand Updated Successfully");
+		}
+		else
+		{
+			System.out.println("Brand Not Disabled");
+			Assert.fail();
+		}
+	}
+	
+	public void clickOnParticularBrandBootStrapBtnToEnable(WebDriver driver, String BrandName) throws Exception
+	{
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//td[.='"+BrandName+"']/..//td//img[@class='table-img']/../following-sibling::td//button[.=' Edit ']/..//div[@class='mdc-switch__icons']")).click();
+		Thread.sleep(2000);
+		if(UpdateMsg.isDisplayed())
+		{
+			System.out.println("Brand Enabled Successfully");
+		}
+		else
+		{
+			System.out.println("Brand Not Enabled");
+			Assert.fail();
+		}
 	}
 	
 	public void clickOnParticularBrandDeleteBtn(WebDriver driver, String BrandName) throws Exception
 	{
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//td[.='"+BrandName+"']/..//td//img[@class='table-img']/../following-sibling::td//button[.=' Edit ']/..//button[@class='btn-sm btn-edit bg-danger']")).click();
+		if(DeleteMsg.isDisplayed())
+		{
+			System.out.println("Brand Deleted Successfully");
+		}
+		else
+		{
+			System.out.println("Brand Not Deleted");
+			Assert.fail();
+		}
 	}
 	
 	
