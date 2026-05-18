@@ -9,12 +9,12 @@ public class LoginPage {
 
 	//Finding WebElements Using @FindBy Annotations
 
-    @FindBy(xpath="//input[@placeholder='Enter your email address']")private WebElement MobileNumberEdt;
+    @FindBy(xpath="//input[@name='userName']")private WebElement UserNameEdt;
     
-    @FindBy(xpath="//input[@placeholder='Enter your password']")private WebElement PasswordEdt;
+    @FindBy(xpath="//input[@name='password']")private WebElement PasswordEdt;
     
-    @FindBy(xpath="//button[.=' Sign In ']")private WebElement SignInBtn;
-	
+    @FindBy(xpath="//span[.=' Login ']")private WebElement LoginBtn;
+    	
   
 	//Rule-3:Create a constructor to initilise these elements
     
@@ -22,11 +22,12 @@ public class LoginPage {
 	{
 		PageFactory.initElements(driver, this);
 	}
+    
 
 	//Rule-4:Provide getters to access these variables
 
-	public WebElement getMobileNumberEdt() {
-		return MobileNumberEdt;
+	public WebElement getUserNameEdt() {
+		return UserNameEdt;
 	}
 
 
@@ -35,20 +36,20 @@ public class LoginPage {
 	}
 
 
-	public WebElement getSignInBtn() {
-		return SignInBtn;
+	public WebElement getLoginBtn() {
+		return LoginBtn;
 	}
 	
 	//Business Libraries
-	public void loginToApplication(String USERNAME , String PASSWORD) throws InterruptedException
+	
+	public void loginToAdmin() throws Throwable
 	{
+		UserNameEdt.sendKeys("admin@ophc.in");
 		Thread.sleep(2000);
-		MobileNumberEdt.sendKeys(USERNAME);
+		PasswordEdt.sendKeys("Admin@123");
 		Thread.sleep(2000);
-		PasswordEdt.sendKeys(PASSWORD);
-		Thread.sleep(2000);
-		SignInBtn.click();
-		Thread.sleep(2000);
+		LoginBtn.click();
 	}
+	
 	
 }

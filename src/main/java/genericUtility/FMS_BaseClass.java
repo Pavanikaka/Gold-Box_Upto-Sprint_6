@@ -1,7 +1,6 @@
 package genericUtility;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
@@ -15,9 +14,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import objectRepository.DashboardPage;
-import objectRepository.LoginPage;
-import objectRepository.MyProfilePage;
+//import objectRepository.DashboardPage;
+//import objectRepository.LoginPage;
+//import objectRepository.MyProfilePage;
 
 public class FMS_BaseClass {
 
@@ -90,14 +89,14 @@ public class FMS_BaseClass {
 	@BeforeMethod(groups={"sprint-1","Sprint-2"})
 		public void bmConfig() throws Exception, Exception
 		{
-		    String USERNAME = pUtility.readDataFromPropertyFile("username");
-		    String PASSWORD = pUtility.readDataFromPropertyFile("password");
-		    Thread.sleep(2000);
-		    LoginPage lPage = new LoginPage(driver);
-		    Thread.sleep(1000);
-		    lPage.loginToApplication(USERNAME, PASSWORD);
-		    Thread.sleep(6000);
-			System.out.println("---Login successfully---");
+//		    String USERNAME = pUtility.readDataFromPropertyFile("username");
+//		    String PASSWORD = pUtility.readDataFromPropertyFile("password");
+//		    Thread.sleep(2000);
+//		    LoginPage lPage = new LoginPage(driver);
+//		    Thread.sleep(1000);
+//		    lPage.loginToApplication(USERNAME, PASSWORD);
+//		    Thread.sleep(6000);
+//			System.out.println("---Login successfully---");
 		}
         
 	@AfterMethod(groups={"sprint-1","Sprint-2"})
@@ -106,12 +105,12 @@ public class FMS_BaseClass {
 //			ExcelFileUtility eUtil = new ExcelFileUtility();
 //		    String ImagePath = eUtil.readDataFromExcel("ImagePath", 0, 1);
 			
-		    Thread.sleep(4000);
-		    DashboardPage dbPage = new DashboardPage(driver);
-		    dbPage.getUserNameDrpDwn().click();
-		    Thread.sleep(1000);
-		    MyProfilePage mpPage = new MyProfilePage(driver);
-		    mpPage.logoutOfApplication();
+//		    Thread.sleep(4000);
+//		    DashboardPage dbPage = new DashboardPage(driver);
+//		    dbPage.getUserNameDrpDwn().click();
+//		    Thread.sleep(1000);
+//		    MyProfilePage mpPage = new MyProfilePage(driver);
+//		    mpPage.logoutOfApplication();
 		    
 		    System.out.println("Logout Successfully");
 		}
